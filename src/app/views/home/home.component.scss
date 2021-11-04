@@ -1,0 +1,112 @@
+#main {
+    background-image: url('../../../assets/img/mustang-4r-3.png');
+    //background-size: 1000px;
+    background-position: right;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-color: #e3f0fb;
+    h1, h2,h3, h4,h5, label {
+        color: black;
+    }
+    h1.--xl {
+        font-size: 490% !important;
+    }
+    h3.inter {
+        font-family: 'Inter' !important;
+    }
+    input, select {
+        font-size: 16px;
+        padding: 16px !important;
+        border-radius: 0 !important;
+    }
+    .content {
+        padding: 6em 0em;
+    }
+}
+// #featured {
+//     border-top: 2px solid #282828;
+// }
+//grid rules 
+@media (min-width: 240px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (min-width: 300px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (min-width: 470px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #main {
+        background-size: cover;
+    }
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #main {
+        background-size: cover;
+        //background-position: 250px;
+    }
+}
+@media (min-width: 900px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #main {
+        background-size: contain;
+        //background-position: 250px;
+    }
+}
+@media (min-width: 1200px) {
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #main {
+        background-size: 1000px;
+    }
+}
+.grid-item {
+    height: fit-content;
+    cursor: pointer;
+    &.dest {
+        //outline: 4px solid #fdd459;
+    }
+    &:hover {
+        img {
+            width: 160%;
+            pointer-events: none;
+            transition: 0.5s ease;
+        }
+    }
+}
+ul {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    li {
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width:599px) {
+    #main {
+        background-position-x: 240px;
+    }
+}
+@media (min-width: 600px) and (max-width:768px) {
+    #main {
+        background-position-x: 297px;
+    }
+}
+@media (min-width: 769px) and (max-width:991px) {
+    #main {
+        background-position-x: 297px;
+    }
+}

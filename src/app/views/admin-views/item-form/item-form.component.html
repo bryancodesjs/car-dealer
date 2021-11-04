@@ -1,0 +1,348 @@
+
+<app-admin-nav></app-admin-nav>
+<div class="animate__animated animate__fadeIn --flex">
+    <div class="container-fluid">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <div class="button button-transp --mb d-flex" routerLink="/admin">
+                    <i class="ri-arrow-left-s-line --mr-half"></i>
+                    <span>ATRAS</span>
+                </div>
+                <div class="title">
+                    <h3><span class="strong">AGREGAR VEHICULO</span></h3>
+                </div>
+            </section>
+        </div>
+    </div>
+    <hr class="">
+    <div class="container-fluid bg-light-gray">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <div class="title">
+                    <h5 class="strong">Agregar Fotos</h5>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-8 col-lg-4 --mb">
+                        <div class="button button-prim button-lg has-icon" routerLink="item-form">
+                            <span>Cargar fotos del dispositivo</span>
+                            <i class="ri-file-upload-line large"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="grid-item" *ngFor="let i of fotos">
+                        <span class="--badge position-absolute --p-half d-flex justify-content-center align-items-center">
+                            
+                            <i class="ri-delete-bin-2-line large"></i>
+                        
+                        </span>
+                        <div class="img-wrap overflow-hidden">
+                            <img [src]="i.foto" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <hr class="d-xs">
+    <div class="container-fluid ">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <h5 class="strong">Informacion General</h5>
+            </section>
+            <section class="col-lg-6 col-xs-12 --p">
+                <div class="row -x-offset-left" >
+                    <div class="col-lg-6 --p-0 --pr --mb">
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Año de fabricacion</option>
+                            <option value="" *ngFor="let y of years">{{y.year}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 --p-0 --pr --mb">
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Marca</option>
+                            <option value="">BMW</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 --p-0 --pr --mb">
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Modelo</option>
+                            <option value="">Serie 3</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 --p-0 --pr --mb">
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Submodelo</option>
+                            <option value="">M Competition</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <hr class="d-xs">
+
+    <div class="container-fluid bg-light-gray">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <h5 class="strong no-m">Precio y Financiamiento</h5>
+            </section>
+            <section class="col-lg-6 col-xs-12 --p">
+                <div class="row -x-offset-left">
+                    <div class="col-lg-4 --p-0 --pr --mb">
+                        <select name="" id="" class="w-100">
+                            <option value="" default>RD</option>
+                            <option value="">US</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-8 --p-0 --pr --mb">
+                        <input type="text" placeholder="0" class="w-100">
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">Mostrar Inicial</label>
+                    </div>
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <input type="text" class="w-100" placeholder="Monto de inicial">
+                    </div>
+                    <!-- <div class="col-lg-6 --p-0 --pr --mb">
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Submodelo</option>
+                            <option value="">M Competition</option>
+                        </select>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <hr class="d-xs">
+
+    <div class="container-fluid ">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <h5 class="strong no-m">Caracteristicas</h5>
+            </section>
+            <section class="col-lg-6 col-xs-12 --p">
+                <div class="row -x-offset-left">
+                    <div class="col-lg-6 --p-0 --pr --mb">
+                        <label for="">Color Exterior</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" *ngFor="let o of colores">{{o.color}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 --p-0 --pr --mb">
+                        <label for="">Color Interior</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" *ngFor="let o of colores">{{o.color}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Material de asientos</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Tela / Poliester</option>
+                            <option value="">Piel</option>
+                            <option value="">Alcantara</option>
+                            <option value="">Vinil</option>
+                            <option value="">Nilon</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Condicion</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Nuevo</option>
+                            <option value="">Usado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Kilometraje</label>
+                        <input type="text" class="w-100" placeholder="0">
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Transmision</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Automatica</option>
+                            <option value="">Manual</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Desplazamiento (cc)</label>
+                        <input type="text" class="w-100" placeholder="0">
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Cilindros</label>
+                        <input type="text" class="w-100" placeholder="0">
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Turbo / Supercargador</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>No</option>
+                            <option value="">Turbo</option>
+                            <option value="">Bi-Turbo</option>
+                            <option value="">Supercargador</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Combustible</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Gasolina</option>
+                            <option value="">Diesel</option>
+                            <option value="">GLP</option>
+                            <option value="">Electrico</option>
+                            <option value="">Hibrido</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Traccion</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Delantera</option>
+                            <option value="">Trasera</option>
+                            <option value="">4WD</option>
+                            <option value="">AWD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Potencia (HP)</label>
+                        <input type="text" class="w-100" placeholder="0">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <hr class="d-xs">
+
+    <div class="container-fluid bg-light-gray">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <h5 class="strong no-m">Extras <i class="ri-star-s-fill"></i></h5>
+            </section>
+            <section class="col-lg-6 col-xs-12 --p">
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" checked>
+                        <label for="" class="--ml-half">Frenos ABS</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" checked>
+                        <label for="" class="--ml-half">Llave Inteligente</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" >
+                        <label for="" class="--ml-half">Camara de Reversa</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" >
+                        <label for="" class="--ml-half">Camara Lateral</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" >
+                        <label for="" class="--ml-half">Sensor de Colision Frontal</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" >
+                        <label for="" class="--ml-half">Parqueo Inteligente</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox" >
+                        <label for="" class="--ml-half">Sensores de Parqueo</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">Manejo Inteligente</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">AC Multizona</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">Sonido Profesional</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">Sun Roof</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">Techo Panoramico</label>
+                    </div>
+                    <div class="col-lg-12 --pr --mb">
+                        <input type="checkbox">
+                        <label for="" class="--ml-half">Tres Filas de Asientos</label>
+                    </div>
+                </div>
+                <!-- <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Traccion</label>
+                        <select name="" id="" class="w-100">
+                            <option value="" default>Delantera</option>
+                            <option value="">Trasera</option>
+                            <option value="">4WD</option>
+                            <option value="">AWD</option>
+                        </select>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+    </div>
+
+    <hr class="d-xs">
+
+    <div class="container-fluid ">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <h5 class="strong no-m">Comentario <i class="ri-pencil-line"></i></h5>
+            </section>
+            <section class="col-lg-6 col-xs-12 --p">
+                <div class="row -x-offset-left">
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <textarea name="" id="" cols="40" rows="5" class="w-100">
+
+                        </textarea>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <hr class="d-xs">
+
+    <div class="container-fluid">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-8 col-lg-4 --mb">
+                        <div class="button button-prim button-lg has-icon" routerLink="item-form">
+                            <span>PUBLICAR VEHICULO</span>
+                            <i class="ri-check-line large"></i>
+                        </div>
+                        <label for="" class="--mt --muted"><strong>Guardar sin publicar</strong></label>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

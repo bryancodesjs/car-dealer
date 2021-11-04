@@ -1,0 +1,46 @@
+<app-admin-nav></app-admin-nav>
+<div class="container-fluid animate__animated animate__fadeIn --flex">
+    <div class="container d-flex flex-column">
+        <section class="--p mt-5 d-flex">
+            <div class="title --mr-2">
+                <h4 class="no-m">Bienvenido,</h4>
+                <h1>Bryan</h1>
+            </div>
+            <div class="--plan d-flex align-items-end mb-1">
+                <div class="--plan-info">
+                    <label for="">Mi Plan</label>
+                    <h4>Starter <i class="ri-rocket-2-line large"></i></h4>
+                </div>
+            </div>
+        </section>
+        <section id="mainOptions" class="--p d-flex flex-wrap">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-lg-6 --mb">
+                    <div class="button button-prim button-lg has-icon" routerLink="/item-form">
+                        <span>AGREGAR VEHICULO</span>
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-lg-6 --mb">
+                    <div class="button button-secn button-lg has-icon" routerLink="/inventory">
+                        <span>MIS VEHICULOS <span>(5)</span></span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-lg-6 --mb">
+                    <div class="button button-secn button-lg has-icon" routerLink="/requests">
+                        <span>SOLICITUDES</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-lg-6 --mb">
+                    <div class="button button-secn button-lg has-icon" routerLink="/settings">
+                        <span>CONFIGURACION</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<app-footer></app-footer>

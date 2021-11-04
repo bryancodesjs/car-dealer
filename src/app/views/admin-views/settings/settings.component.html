@@ -1,0 +1,67 @@
+<app-admin-nav></app-admin-nav>
+<div class="animate__animated animate__fadeIn --flex">
+    <div class="container-fluid animate__animated animate__fadeIn">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <div class="button button-transp --mb d-flex" routerLink="/admin">
+                    <i class="ri-arrow-left-s-line --mr-half"></i>
+                    <span>ATRAS</span>
+                </div>
+                <div class="title">
+                    <h3><span class="strong">CONFIGURACION</span></h3>
+                </div>
+            </section>
+            <section class="col-lg-4 col-xs-12 --p">
+                <h5 class="strong">Informacion General</h5>
+                <div class="row -x-offset-left" >
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Nombre Completo / Nombre Comercial</label>
+                        <input type="text" class="w-100" placeholder="nombre de usuario" disabled>
+                    </div>
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Correo Electronico</label>
+                        <input type="text" class="w-100" placeholder="ejemplo@mail.com">
+                        <label for="" class="--primary --mt-half">Verifique su correo electronico para desbloquear beneficios</label>
+                    </div>
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <label for="">Telefono</label>
+                        <input type="number" class="w-100" placeholder="8090000000">
+                        <label for="" class="--muted --mt-half">Introduzca su telefono sin guiones ni parentesis</label>
+                    </div>
+                    <div class="col-lg-12 --p-0 --pr --mb">
+                        <input type="checkbox" class="--mr-half" checked>
+                        <label for="" class="">Mostrar mi telefono en mis publicaciones</label>
+                    </div>
+                </div>
+            </section>
+            <section class="col-lg-4 col-xs-12 --p">
+                <h5 class="strong">Seguridad</h5>
+                <div class="row -x-offset-left" >
+                    <div id="changePasswordBtn" class="col-lg-12 --p-0 --pr --mb" *ngIf="!setNewPassword" (click)="changePassword()">
+                        <div class="button button-lg button-prim has-icon">
+                            Cambiar Contraseña
+                            <i class="ri-shield-keyhole-line"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12 --p-0 --pr --mb animate__animated animate__slideInDown" *ngIf="setNewPassword">
+                        <label for="">Nueva Contraseña</label>
+                        <input type="password" class="w-100" placeholder="****">
+                    </div>
+                    <div class="col-lg-12 --p-0 --pr --mb animate__animated animate__slideInDown" *ngIf="setNewPassword">
+                        <label for="">Confirmar Contraseña</label>
+                        <input type="password" class="w-100" placeholder="****">
+                    </div>
+                    <div class="col-lg-12 --p-0 --pr --mb animate__animated animate__slideInDown" *ngIf="setNewPassword">
+                        <div class="button button-lg button-prim has-icon" (click)="saveNewPassword()">
+                            Guardar Nueva Contraseña
+                            <i class="ri-shield-keyhole-line"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

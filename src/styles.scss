@@ -1,1 +1,351 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/remixicon/fonts/remixicon.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oxanium:wght@500;700&display=swap');
+
+//variables
+$color-primary: #4372ec;
+$color-secondary: #e7e7e7;
+$color-confirm: #3ab389;
+$white:#fff;
+//$black: #272727;
+$black: #1d1d1d;
+$muted-text: #949494;
+$background-lightgray: #f8f8fa;
+$border-color: #c1c1c1; 
+$red: #ed6464;
+$base-font-size: 16px;
+$primary-font: Inter;
+$secondary-font: Inter;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body, html {
+    height: 100%;
+}
+body {
+    font-size: $base-font-size !important;
+}
+h1 {
+    font-size: 3.052rem !important;
+    font-family: $secondary-font !important;
+    font-size: 3.052rem !important;
+    &.brand {
+        font-family: $primary-font !important;
+    }
+}
+h2, h3, h4, h5, h6 {
+    font-family: $primary-font !important;
+}
+label {
+    font-family: $secondary-font !important;
+    font-size: 0.8rem !important;
+}
+//screen flex
+app-root {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    app-home, app-admin, app-item-form, app-inventory, app-settings, app-requests, app-login {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+    }
+}
+.navbar-brand img {
+    width: 160px;
+}
+.--text-shadow {
+    //text-shadow: 2px 2px 15px #00000069;
+}
+.--confirm {
+    color:$color-confirm;
+}
+.--white {
+    color: $white !important;
+}
+.--alert {
+    color: $red;
+}
+.--flex {
+    flex: 1;
+}
+.--pointer {
+    cursor: pointer;
+}
+.bg-light-primary {
+    background-color: $color-primary;
+    h1, h2, h3, h4, h5, h6, i {
+        color: $white;
+    }
+}
+.bg-light-gray {
+    background-color: $background-lightgray;
+}
+.bg-dark-gray {
+    background-color: $color-secondary;
+}
+.bg-light-white {
+    background-color: $white;
+}
+.bg-dark-black {
+    background-color: #060e21;
+}
+.strong {
+    font-weight: 700;
+}
+.button {
+    font-family: $secondary-font;
+    cursor: pointer;
+    &.has-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.button-prim {
+        background-color: $color-primary;
+        color: $white;
+        font-weight: 500;
+        &:hover {
+            background-color: lighten($color-primary, 3%);
+        }
+    }
+    &.button-secn {
+        background-color: $color-secondary;
+        color: $black;
+        &:hover {
+            background-color: lighten($color-secondary, 3%);
+        }
+    }
+    &.button-transp {
+        background-color: inherit;
+        color: $muted-text;
+        &:hover {
+            color: $black;
+        }
+    }
+    &.button-tab {
+        color: $muted-text;
+        border-bottom: 4px solid #00000000;
+        transition: 0.2s ease;
+        &.active {
+            color: black;
+            border-bottom: 4px solid black !important;
+            transition: 0.3s ease;
+        }
+    }
+    &.button-lg {
+        font-size: $base-font-size;
+        padding: $base-font-size;
+    }
+    &.button-md {
+        font-size: $base-font-size;
+        padding: 8px 16px;
+    }
+    &.button-sm {
+        font-size: $base-font-size;
+        padding: 4px 8px;
+    }
+}
+input, select, textarea {
+    font-size: $base-font-size;
+    padding: 8px 16px !important;
+    background-color: $background-lightgray !important;
+    border: 1px solid $border-color !important;
+    font-family: $secondary-font !important;
+    &.--no-outline {
+        outline: none !important;
+    }
+}
+i {
+    font-size: $base-font-size;
+    &.large {
+        font-size: 20px;
+    }
+    &.x-large {
+        font-size: 2em;
+    }
+}
+hr {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+// .container-fluid, .container {
+//     padding: 0 !important;
+// }
+// .row {
+//     margin: 0 !important;
+// }
+.--p {
+    padding: $base-font-size;
+}
+.--p-half {
+    padding: 8px !important;
+}
+.--pl {
+    padding-left: $base-font-size !important;
+}
+.--pr {
+    padding-right: $base-font-size !important;
+}
+.--p-0 {
+    padding: 0 !important;
+    &.--pr {
+        padding-right: $base-font-size !important;
+    }
+}
+.--mb {
+    margin-bottom: $base-font-size;
+}
+.--mb-half {
+    margin-bottom: 8px;
+}
+.--mr {
+    margin-right: $base-font-size;
+}
+.--mr-2 {
+    margin-right: 32px;
+}
+.--mt {
+    margin-top: 16px;
+}
+.--mt-2 {
+    margin-top: 32px !important;
+}
+.--mt-4 {
+    margin-top: 64px !important;
+}
+.--mt-half {
+    margin-top: 8px;
+}
+.--ml-half {
+    margin-left: 8px;
+}
+.--mr-half {
+    margin-right: 8px;
+}
+.--mb-2 {
+    margin-bottom: 32px;
+}
+.--mb-half {
+    margin-right: 8px;
+}
+.no-m {
+    margin: 0 !important;
+}
+.d-xs {
+    display: none;
+}
+.grid {
+    display: grid;
+    grid-gap: 1rem;
+    .img-wrap {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        width: 140%;
+        transition: 0.5s ease;
+    }
+}
+@media screen and (max-width: 575px){
+    .grid img {
+        width: 200%;
+    }
+    .center-xs {
+        justify-content: center;
+    }
+    .d-xs {
+        display: block !important;
+    }
+    .--p {
+        padding: 16px 0px !important;
+        &.--p-xs {
+            margin-right: 16px;
+            margin-left: 16px;
+        }
+    }
+    .--p-0 {
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+        padding-right: calc(var(--bs-gutter-x) * .5 !important);
+    }
+}
+@media (min-width: 576px) and (max-width:3000px) {
+    .-x-offset-left {
+        margin-left: 0 !important;
+    }
+}
+
+// @media (min-width: 300px) {
+//     .grid{
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+// }
+// @media (min-width: 768px) {
+//     .grid{
+//         grid-template-columns: repeat(3, 1fr);
+//     }
+// }
+// @media (min-width: 900px) {
+//     .grid{
+//         grid-template-columns: repeat(4, 1fr);
+//     }
+// }
+// @media (min-width: 1200px) {
+//     .grid{
+//         grid-template-columns: repeat(4, 1fr);
+//     }
+// }
+.--badge {
+    cursor: pointer;
+    width: 40px !important;
+    background-color: white !important;
+    height: 40px;
+    color: $muted-text;
+    transform: translate(8px, 8px);
+    border-radius: 4px;
+    &:hover {
+        color: $red;
+    }
+}
+.--muted {
+    color:$muted-text;
+}
+.--cap {
+    text-transform: capitalize;
+}
+.--upper {
+    text-transform: uppercase;
+}
+.--primary {
+    color: $color-primary;
+}
+ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    li {
+        line-height: 1.75 !important;
+    }
+}
+a {
+    text-decoration: none !important;
+    font-family: $secondary-font !important;
+    &:hover {
+        color:$color-primary !important;
+    }
+}
+.--vertical-section-padding {
+    padding: 2em 0em;
+}
+footer {
+    background-color: $black;
+    h1, h2, h3, h4, h5 {
+        color: $white;
+    }
+    p, a, small, label {
+        color: $muted-text;
+    }
+}

@@ -1,0 +1,71 @@
+<app-admin-nav></app-admin-nav>
+<div class="animate__animated animate__fadeIn --flex">
+    <div class="container-fluid animate__animated animate__fadeIn">
+        <div class="container d-flex flex-column">
+            <section class="--p">
+                <div class="button button-transp --mb d-flex" routerLink="/admin">
+                    <i class="ri-arrow-left-s-line --mr-half"></i>
+                    <span>ATRAS</span>
+                </div>
+                <div class="title">
+                    <h3><span class="strong">SOLICITUDES</span></h3>
+                </div>
+                <div class="row">
+                    <section class="col-lg-6 col-xs-12 --p">
+                        <div class="row -x-offset-left" >
+                            <div class="col-lg-12 --p-0 --pr --mb">
+                                <input type="text" class="w-100" placeholder="Buscar solicitud">
+                            </div>
+                        </div>
+                        <div class="row -x-offset-left" >
+                            <div class="col-lg-12 --p-0 --mb col-xs-3 d-flex">
+                            <div class="button button-sm button-prim">Pendientes (5)</div>
+                            <div class="button button-sm button-secn">Archivadas (0)</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <div class="--p">
+                <div class="row">
+                    <section *ngFor="let r of requests" class="col-lg-11 col-xs-12 --p bg-light-gray border --mb">
+                        <div class="row -x-offset-left --pl" >
+                            <p><strong>Solicitud No. </strong> {{r.requestno}}</p>
+                        </div>
+                        <div class="row -x-offset-left --p --p-xs" >
+                            <div class="col-lg-3 --p-0 --pr --mb d-flex flex-column">
+                                <i class="ri-user-line x-large"></i>
+                                <label for="">Cliente</label>
+                                <p class="strong no-m">{{r.name }}</p>
+                                <p class="strong no-m">{{r.age}} Años</p>
+                                <label for="" class="--mt-half">Ingresos</label>
+                                <p class="strong no-m --confirm">RD${{r.income}}/mes</p>
+                            </div>
+                            <div class="col-lg-3 --p-0 --pr --mb d-flex flex-column">
+                                <i class="ri-phone-fill x-large"></i>
+                                <label for="">Telefono</label>
+                                <p class="strong no-m">{{r.phone}}</p>
+                                <p class="strong no-m">{{r.email}}</p>
+                            </div>
+                            <div class="col-lg-3 --p-0 --pr --mb d-flex flex-column">
+                                <i class="ri-car-fill x-large"></i>
+                                <label for="">Vehiculo</label>
+                                <p class="strong no-m">{{r.car}}</p>
+                                <p class=" no-m">#{{r.code}}</p>
+                                <p class="strong no-m --confirm">US${{r.price}}</p>
+                            </div>
+                            <div class="col-lg-3 --p-0 --pr --mb d-flex flex-column">
+                                <i class="ri-money-dollar-circle-line x-large"></i>
+                                <label for="">Inicial</label>
+                                <p class="strong no-m --confirm">US${{r.downpayment}}</p>
+                                <label for="" class="--mt-half">Duracion Financiamiento</label>
+                                <p class="strong no-m">{{r.loanterm}} meses</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
