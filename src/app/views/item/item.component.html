@@ -1,1 +1,144 @@
-<p>item works!</p>
+<app-admin-nav></app-admin-nav>
+<div class="container-fluid --flex">
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-6">
+                <section class="p-3">
+                    <div class="col">
+                        <div id="display" class="--display">
+                            <div class="--img-wrap">
+                                <img src="https://i.blogs.es/29438e/ford-mustang-shelby-gt500-mexico_/1366_2000.jpg" alt="">
+                            </div>
+                        </div>
+                        <div id="collection" class="--collection">
+                            <div class="--carousel">
+                                <div class="item" *ngFor="let i of collection">
+                                    <div class="img-wrap">
+                                        <img [src]="i" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3">
+                <section class="p-3">
+                    <label for="" class="--upper --muted --mid">nuevo | <span>0km</span></label>
+                    <h4><strong>Ford Mustang GT350 2021</strong></h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="" class="--upper --muted --mid">Precio</label>
+                            <h5 class="--primary"><strong>US$37,000</strong></h5>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="" class="--upper --muted --mid">Inicial desde</label>
+                            <h5 class="--primary"><strong>US$6,000</strong></h5>
+                        </div>
+                    </div>
+                    <div class="button button-md button-prim has-icon mt-2">
+                        <span>Solicitar Financiamiento</span>
+                        <i class="ri-file-list-3-line"></i>
+                    </div>
+                </section>
+                <section class="p-3">
+                    <table class="table table-borderless">
+                        <h5 class="strong">Especifiaciones</h5>
+                        <tbody>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Combustible</td>
+                                <td>Gasolina</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Cilindros</td>
+                                <td>8</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Transmision</td>
+                                <td class="text-right">Manual [6 Velocidades]</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Toma de Aire</td>
+                                <td class="text-right">Supercargado</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Traccion</td>
+                                <td class="text-right">Trasera</td>
+                            </tr>
+                            <hr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="p-3 mt-3">
+                    <table class="table table-borderless">
+                        <h5 class="strong">Estilo</h5>
+                        <tbody>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Color Interior</td>
+                                <td>Beige</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Color Exterior</td>
+                                <td>Azul</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Material Asientos</td>
+                                <td class="text-right">Gamuza</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Toma de Aire</td>
+                                <td class="text-right">Supercargado</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Traccion</td>
+                                <td class="text-right">Trasera</td>
+                            </tr>
+                            <hr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="col-lg-3">
+                <section class="p-3 bg-light-gray">
+                    <h5>Vendedor</h5>
+                    <hr>
+                    <ul class="mt-3">
+                        <li>
+                            <i class="ri-user-line --mr-half --primary"></i>
+                            <span>Autocraft SRL</span>
+                        </li>
+                        <li>
+                            <i class="ri-mail-line --mr-half --primary"></i>
+                            <span>admin@mail.com</span>
+                        </li>
+                        <li>
+                            <i class="ri-phone-line --mr-half --primary"></i>
+                            <span>809 000 0000</span>
+                        </li>
+                        <li class="mt-3">
+                            <div class="button button-lg button-secn has-icon">
+                                <span>Solicitar Informacion</span>
+                                <i class="ri-mail-send-line"></i>
+                            </div>
+                        </li>
+                        <li class="mt-3">
+                            <div class="button button-lg button-confirm has-icon">
+                                <span>Contactar Via Whatsapp</span>
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

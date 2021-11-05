@@ -1,0 +1,33 @@
+#display {
+    img {
+        width: 100%;
+    }
+}
+#collection {
+    .--carousel {
+        display: flex;
+        flex-direction: row;
+        .item {
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            .img-wrap {
+                img {
+                    filter: brightness(0.6);
+                    width: 200%;
+                }
+            }
+            &:hover {
+                .img-wrap img {
+                    filter: brightness(1);
+                }
+            }
+        }
+    }
+}
+td {
+    border-bottom: 0 !important;
+}
+table hr {
+    color: #8d8d8d;
+}

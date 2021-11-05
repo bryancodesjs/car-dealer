@@ -7,6 +7,7 @@ import { RequestsComponent } from './views/admin-views/requests/requests.compone
 import { SettingsComponent } from './views/admin-views/settings/settings.component';
 import { ExploreComponent } from './views/explore/explore.component';
 import { HomeComponent } from './views/home/home.component';
+import { ItemComponent } from './views/item/item.component';
 import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'settings', component: SettingsComponent},
   {path: 'requests', component: RequestsComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'explore', component: ExploreComponent}
+  {path: 'explore', component: ExploreComponent},
+  {path: 'item', component: ItemComponent}
 ];
 
 @NgModule({

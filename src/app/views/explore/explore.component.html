@@ -31,7 +31,7 @@
                         <div class="">
                             <div class="row">
                                 <div class="d-flex justify-content-between">
-                                    <h5 class="--primary">Estilo</h5>
+                                    <h5 class="--primary">Vehiculo</h5>
                                     <div class="button button-sm button-secn has-icon">
                                         <i class="ri-eraser-line --mr-half"></i>
                                         <span>Limpiar Filtro</span>
@@ -181,6 +181,18 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <label for="">Material Asientos</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Piel</option>
+                                        <option value="">Gamuza</option>
+                                        <option value="">Vinil</option>
+                                        <option value="">Tela (Nylon)</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <hr class="mt-4 mb-3">
                         <details>
@@ -215,7 +227,7 @@
                     <div class="content">
                         <!-- grid -->
                         <div class="grid">
-                            <div  class="grid-item border overflow-hidden" *ngFor="let item of autos">
+                            <div  class="grid-item border overflow-hidden" *ngFor="let item of autos" routerLink="/item">
                                 <div class="img-wrap overflow-hidden">
                                     <img [src]="item.img" alt="">
                                 </div>
