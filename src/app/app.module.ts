@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SettingsComponent } from './views/admin-views/settings/settings.component';
 import { RequestsComponent } from './views/admin-views/requests/requests.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
+import { PromoBannerComponent } from './components/promo-banner/promo-banner.component';
+import { ExploreComponent } from './views/explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
     FooterComponent,
     SettingsComponent,
     RequestsComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    PromoBannerComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,

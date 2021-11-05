@@ -1,0 +1,110 @@
+summary {
+    // list-style-image: url('../../../assets/img/icons/arrow-down.svg');
+    list-style: none;
+}
+//grid rules 
+@media (min-width: 240px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (min-width: 300px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (min-width: 470px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #main {
+        background-size: cover;
+    }
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #main {
+        background-size: cover;
+        //background-position: 250px;
+    }
+}
+@media (min-width: 900px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #main {
+        background-size: contain;
+        //background-position: 250px;
+    }
+}
+@media (min-width: 992px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #main {
+        background-size: 1000px;
+    }
+}
+.grid-item {
+    height: fit-content;
+    cursor: pointer;
+    &.dest {
+        //outline: 4px solid #fdd459;
+    }
+    &:hover {
+        img {
+            width: 160%;
+            pointer-events: none;
+            transition: 0.5s ease;
+        }
+    }
+}
+
+//filter and sidenav
+#filterButtonMobile {
+    display: none;
+}
+#filterControls {
+    display: block;
+}
+#filterCloser {
+    display: none;
+    cursor: pointer;
+}
+ul {
+    margin-bottom: 0 !important;
+}
+@media screen and (max-width:767px) { //992px
+    #filterButtonMobile {
+        display: block;
+    }
+    #filterControls {
+        display: none;
+        .row>* {
+            width:unset ;
+        }
+    }
+    #filterCloser {
+        display: flex !important;
+    }
+}
+.absolue--filter--controls {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #f8f8fa;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: scroll;
+    animation-duration: 0.3s;
+}

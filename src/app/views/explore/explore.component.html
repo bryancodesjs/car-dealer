@@ -1,0 +1,237 @@
+<app-admin-nav></app-admin-nav>
+<div class="container-fluid --flex animate__animated animate__fadeIn">
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="d-flex justify-content-between mb-5">
+                <h2 class="no-m strong">Resultados</h2>
+                <select name="" id="" class="--sm explore">
+                    <option value="">Mas reciente</option>
+                    <option value="">Mas antigua</option>
+                    <option value="">Mayor precio</option>
+                    <option value="">Menor precio</option>
+                </select>
+            </div>
+        </div>
+        <div class="row h-100">
+            <div class="col-lg-3 col-md-4 bg-light-gray p-3">
+                <section id="filters">
+                    <div id="filterButtonMobile" class="content">
+                        <div class="p-3" (click)="showFilters()">
+                            <div class="button button-sm button-transp has-icon w-100">
+                                <span>Busqueda Avanzada</span>
+                                <i class="ri-sound-module-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filterControls" class="">
+                        <!-- cerrar modal filtros -->
+                        <div id="filterCloser" class="justify-content-end">
+                            <i id="closeFilterControl" class="ri-close-fill x-large" (click)="showFilters()"></i>
+                        </div>
+                        <div class="">
+                            <div class="row">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="--primary">Estilo</h5>
+                                    <div class="button button-sm button-secn has-icon">
+                                        <i class="ri-eraser-line --mr-half"></i>
+                                        <span>Limpiar Filtro</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <label for="" class="d-block">Condicion</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="">Todos</option>
+                                        <option value="">Nuevo</option>
+                                        <option value="">Usado</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 mt-2">
+                                    <label for="" class="d-block">Marca</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="">Todas</option>
+                                        <option value="">Audi</option>
+                                        <option value="">Acura</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 mt-2">
+                                    <label for="" class="d-block">Año</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="">Todos</option>
+                                        <option value="">2023</option>
+                                        <option value="">2022</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 mt-2">
+                                    <label for="" class="d-block">Modelo</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="">Todos</option>
+                                        <option value="">Modelo 1</option>
+                                        <option value="">Modelo 2</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 mt-2">
+                                    <label for="" class="d-block">Version (Trim)</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="">Todas</option>
+                                        <option value="">EX</option>
+                                        <option value="">EXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-3">
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="d-flex justify-content-between">
+                                        <label for="" class="d-block">Precio Maximo</label>
+                                        <label for="" class="d-block --primary strong">RD$00.00</label>
+                                    </div>
+                                    <input min="100000" max="1000000" step="100000" current="100000" type="range" class="form-range" id="priceRange">                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-3">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label for="">Transmision</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todas</option>
+                                        <option value="">Automatica</option>
+                                        <option value="">Automatica (CVT)</option>
+                                        <option value="">Manual</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-lg-12">
+                                    <label for="">Cilindros</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-lg-12">
+                                    <label for="">Toma de Aire (Intake)</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Natural</option>
+                                        <option value="">Turbo</option>
+                                        <option value="">Bi-Turbo</option>
+                                        <option value="">Supercargado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-lg-12">
+                                    <label for="">Combustible</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Gasolina</option>
+                                        <option value="">Diesel</option>
+                                        <option value="">Electrico</option>
+                                        <option value="">Hibrido</option>
+                                        <option value="">Gas Propano (GLP)</option>
+                                        <option value="">Gas Natural</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-lg-12">
+                                    <label for="">Traccion</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Delantero</option>
+                                        <option value="">Trasero</option>
+                                        <option value="">4WD</option>
+                                        <option value="">AWD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-3">
+                        <div class="">
+                            <h5 class="--primary">Estilo</h5>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label for="">Color Exterior</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Rojo</option>
+                                        <option value="">Blanco</option>
+                                        <option value="">Negro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <label for="">Color Interior</label>
+                                    <select name="" id="" class="w-100">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Rojo</option>
+                                        <option value="">Blanco</option>
+                                        <option value="">Negro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-3">
+                        <details>
+                            <summary class="p-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>Accesorios</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </summary>
+                            <ul class=" p-3">
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Modo Eco</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Transmision Tiptronic</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">3 filas de asientos</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Sunroof</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Techo panoramico</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Frenos ABS</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Paddleshift</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Android Auto</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Apple Car Play</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Aire Multi Zona</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Sensores de Parqueo</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Sensores de Colision</p></label></li>
+                                <li><input type="checkbox" class="--mr-half">           <label for=""><p class="no-m">Radio Bluetooth</p></label></li>
+                            </ul>
+                        </details>
+                        <hr>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <section id="gridexplore">
+                    <div class="content">
+                        <!-- grid -->
+                        <div class="grid">
+                            <div  class="grid-item border overflow-hidden" *ngFor="let item of autos">
+                                <div class="img-wrap overflow-hidden">
+                                    <img [src]="item.img" alt="">
+                                </div>
+                                <div class="bg-light-white">
+                                    <div class="p-3 --p-xs">
+                                        <label for=""><small class="--upper">{{item.new}}</small></label>
+                                        <h6 class="no-m --cap"><strong>{{item.brand + ' ' + item.model + ' ' + item.year}}</strong></h6>
+                                        <h6 class="--mt-half --primary"><span class="--upper">{{item.currency}}$</span>{{item.price}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  marcas = true;
-  tipos = false;
+  marcas = false;
+  tipos = true;
   combustible = false;
 
   mostrar(filt: string) {
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
         this.combustible = true;
         break;
       default:
-        this.marcas = true;
+        this.tipos = true;
         break;
     }
   }
@@ -204,7 +204,20 @@ export class HomeComponent implements OnInit {
     {type: 'motocicletas',
     cantidad: '137'},
   ]
-  
+  articles = [
+    {title:'lo nuevo que trae genesis en 2022',
+    category:'lujo',
+    img:'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-genesis-g70-1-1599644631.jpg'},
+    {title:'el fabricante de tu telefono se une a la movilidad electrica',
+    category:'mercado',
+    img:'https://i.insider.com/5e625d62fee23d761b5708f2?width=700'},
+    {title:'lo que nos gusta (y no nos gusta) de la nueva CX-30',
+    category:'review',
+    img:'https://grupoviamar.com/uploads/2517_1582924055.jpg'},
+    {title:'el civic 2022 evoluciona de lo agresivo a lo imponente',
+    category:'review',
+    img:'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/336505-all-new-civic-e-hev-1624521418.jpg'},
+    ]
   constructor() { }
 
   ngOnInit(): void {

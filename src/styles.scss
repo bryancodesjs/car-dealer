@@ -23,6 +23,7 @@ $secondary-font: Inter;
 }
 body, html {
     height: 100%;
+    font-family: $secondary-font !important;
 }
 body {
     font-size: $base-font-size !important;
@@ -47,7 +48,7 @@ app-root {
     display: flex;
     flex-flow: column;
     height: 100%;
-    app-home, app-admin, app-item-form, app-inventory, app-settings, app-requests, app-login {
+    app-home, app-admin, app-item-form, app-inventory, app-settings, app-requests, app-login, app-explore {
         flex: 1;
         display: flex;
         flex-flow: column;
@@ -55,6 +56,7 @@ app-root {
 }
 .navbar-brand img {
     width: 160px;
+    margin-right: 3em;
 }
 .--text-shadow {
     //text-shadow: 2px 2px 15px #00000069;
@@ -90,7 +92,7 @@ app-root {
     background-color: $white;
 }
 .bg-dark-black {
-    background-color: #060e21;
+    background-color: #0d1935;
 }
 .strong {
     font-weight: 700;
@@ -196,10 +198,13 @@ hr {
     }
 }
 .--mb {
-    margin-bottom: $base-font-size;
+    margin-bottom: $base-font-size !important;
 }
 .--mb-half {
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
+}
+.--mb-2 {
+    margin-bottom: 32px !important;
 }
 .--mr {
     margin-right: $base-font-size;
@@ -323,6 +328,15 @@ hr {
 .--primary {
     color: $color-primary;
 }
+.--bg--primary {
+    background-color: $color-primary;
+    span {
+        color: white;
+    }
+}
+#promo {
+    cursor: pointer;
+}
 ul {
     list-style: none !important;
     padding-left: 0 !important;
@@ -348,4 +362,15 @@ footer {
     p, a, small, label {
         color: $muted-text;
     }
+}
+select {
+    &.--sm {
+        padding: 0.25rem 0.5rem !important;
+    }
+    &.--sm.explore {
+        padding: 0.25rem 1.5rem 0.25rem 0.5rem !important;
+    }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #f8f8fa url("./assets/img/icons/arrow-down.svg") no-repeat scroll 97% center / 25px 25px !important;
 }

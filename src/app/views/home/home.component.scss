@@ -85,6 +85,14 @@
         }
     }
 }
+.grid-item-article {
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    .img-wrap {
+        height: 220px;
+    }
+}
 ul {
     display: flex;
     justify-content: start;
@@ -109,4 +117,14 @@ ul {
     #main {
         background-position-x: 297px;
     }
+}
+@media (min-width: 1200px) and (max-width:1399px) {
+    #main {
+        background-size: contain;
+    }
+}
+select {
+    -moz-appearance: none;
+    background: #f8f8fa url("../../../assets/img/icons/arrow-down.svg") no-repeat scroll 97% center / 25px 25px !important;
+    border: 1px solid #ccc;
 }

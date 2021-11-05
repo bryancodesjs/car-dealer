@@ -1,50 +1,7 @@
+<app-promo-banner></app-promo-banner>
 <app-admin-nav></app-admin-nav>
 <div class="animate__animated animate__fadeIn --flex">
     <div id="main" class="container-fluid bg-light-gray">
-        <!-- <header class="container-fluid">
-            <div class="container content">
-                <div class="column --p">
-                    <div class="title --mb-2">
-                        <h5 class="--text-shadow">NUEVOS, SEMINUEVOS Y USADOS</h5>
-                        <h1 class="brand --text-shadow">Encuentra tu siguiente vehiculo</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-xxl-11 col-xl-10 col-lg-10"> 
-                             <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Año</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Marca</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Modelo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="col-xxl-1 col-xl-2 col-lg-2"> 
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="button button-prim button-lg w-100 text-center">Buscar</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header> -->
         <header class="container-fluid">
             <div class="container content">
                 <div class="row mb-4">
@@ -56,9 +13,6 @@
                                 <h5 class="inter --mt"><i class="ri-checkbox-circle-fill --mr --primary"></i> <small>NUEVOS, SEMINUEVOS Y USADOS</small></h5>
                             </div>
                         </div>
-                    </div>
-                    <div id="mustang-img" class="col-md-6">
-                        <!-- <img class="w-100" src="../../../assets/img/mustang-4r-2.png" alt=""> -->
                     </div>
                 </div>
                 <div class="container ">
@@ -92,7 +46,7 @@
                             <div class="col-xxl-1 col-xl-2 col-lg-2"> 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="button button-prim button-lg w-100 text-center">Buscar</div>
+                                        <div class="button button-prim button-lg w-100 text-center" routerLink="/explore">Buscar</div>
                                     </div>
                                 </div>
                             </div>
@@ -110,9 +64,6 @@
                 </div>
                 <div class="grid">
                     <div  class="grid-item border overflow-hidden" *ngFor="let item of autos">
-                        <!-- <span class="--badge position-absolute --p-half d-flex justify-content-center align-items-center">
-                            <i class="ri-delete-bin-2-line large"></i>
-                        </span> -->
                         <div class="img-wrap overflow-hidden">
                             <img [src]="item.img" alt="">
                         </div>
@@ -123,22 +74,6 @@
                                 <h6 class="--mt-half --primary"><span class="--upper">{{item.currency}}$</span>{{item.price}}</h6>
                             </div>
                         </div>
-                        <!-- <div class="row bg-dark-gray">
-                            <div class="col-lg-6 col-xs-6">
-                                <div class="button button-sm button-secn d-flex justify-content-center">
-                                    <small class="d-flex justify-content-center align-items-center">
-                                        Archivar <i class="ri-folder-open-line --ml-half"></i>
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xs-6">
-                                <div class="button button-sm button-secn d-flex justify-content-center">
-                                    <small class="d-flex justify-content-center align-items-center">
-                                        Editar <i class="ri-pencil-line --ml-half"></i>
-                                    </small>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -153,10 +88,10 @@
                 <div class="tabs">
                     <div class="row">
                         <div class="col-lg-2 col-sm-4">
-                            <div [class]="marcas?  'button button-sm button-tab active' : 'button button-sm button-tab' " (click)="mostrar('marcas')">Marcas</div>
+                            <div [class]="tipos?  'button button-sm button-tab active' : 'button button-sm button-tab' " (click)="mostrar('tipos')">Tipos</div>
                         </div>
                         <div class="col-lg-2 col-sm-4">
-                            <div [class]="tipos?  'button button-sm button-tab active' : 'button button-sm button-tab' " (click)="mostrar('tipos')">Tipos</div>
+                            <div [class]="marcas?  'button button-sm button-tab active' : 'button button-sm button-tab' " (click)="mostrar('marcas')">Marcas</div>
                         </div>
                         <div class="col-lg-2 col-sm-4">
                             <div [class]="combustible?  'button button-sm button-tab active' : 'button button-sm button-tab' " (click)="mostrar('combustible')">Combustible</div>
@@ -190,6 +125,31 @@
                                     <a href="" class="--cap">{{i.name}}<span *ngIf="i.name">({{i.cantidad}})</span></a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blog" class="container-fluid">
+        <div class="container --vertical-section-padding">
+            <div class="column --p">
+                <div class="title">
+                    <div class="d-flex justify-content-between align-items-end --mb">
+                        <h2 class="strong no-m">Autonoticias</h2>
+                        <a href="">Ver todos</a>
+                    </div>
+                    <div class="grid">
+                        <div  class="grid-item-article overflow-hidden" *ngFor="let item of articles">
+                            <div class="img-wrap overflow-hidden">
+                                <img [src]="item.img" alt="">
+                            </div>
+                            <div class="bg-light-white">
+                                <div class="--p --p-xs">
+                                    <label for=""><small class="--upper">{{item.category}}</small></label>
+                                    <h6 class="no-m --cap"><strong>{{item.title}}</strong></h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
