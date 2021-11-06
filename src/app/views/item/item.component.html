@@ -1,8 +1,8 @@
 <app-admin-nav></app-admin-nav>
-<div class="container-fluid --flex">
+<div class="container-fluid --flex animate__animated animate__fadeIn">
     <div class="container">
         <div class="row mt-5 mb-5">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <section class="p-3">
                     <div class="col">
                         <div id="display" class="--display">
@@ -21,8 +21,224 @@
                         </div>
                     </div>
                 </section>
+                <section class="p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <label for="" class="--upper --muted --mid">nuevo | <span>0km</span></label>
+                            <h4><strong>Ford Mustang GT350 2021</strong></h4>
+                            <p for="" class="--upper --mid">Item  <span>10594</span></p>
+                        </div>
+                        <div class="button button-sm button-transp has-icon">
+                            <i class="ri-heart-3-line large --mr-half"></i>
+                            <span class="">Guardar</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="" class="--upper --muted --mid">Precio</label>
+                            <h5 class="--primary"><strong>US$37,000</strong></h5>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="" class="--upper --muted --mid">Inicial desde</label>
+                            <h5 class="--primary"><strong>US$6,000</strong></h5>
+                        </div>
+                    </div>
+                    <div class="button button-md button-prim has-icon mt-2">
+                        <span>Solicitar Financiamiento</span>
+                        <i class="ri-file-list-3-line"></i>
+                    </div>
+                </section>
+                <section class="p-3">
+                    <table class="table table-borderless">
+                        <h5 class="strong">Especifiaciones</h5>
+                        <tbody>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Kilometraje</td>
+                                <td>0km</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Combustible</td>
+                                <td>Gasolina</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Cilindros</td>
+                                <td>8</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Rendimiento Combustible <span class="--muted" title="Rendimiento estimado por el fabricante"><i class="ri-information-line --light"></i></span></td>
+                                <td class="d-flex">
+                                    <div class="--mr">
+                                        <label for="" class="d-block --muted">Ciudad</label>
+                                        <span>36Kmg</span>
+                                    </div>
+                                    <div>
+                                        <label for="" class="d-block --muted">Autopista</label>
+                                        <span>42Kmg</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Transmision</td>
+                                <td class="text-right">Manual</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Toma de Aire</td>
+                                <td class="text-right">Supercargado</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Traccion</td>
+                                <td class="text-right">Trasera</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Asientos</td>
+                                <td class="text-right">5</td>
+                            </tr>
+                            <hr>
+                        </tbody>
+                        <!-- <p href="" class="text-center --primary mt-3"><span class="--mr-half">Ver Especificaciones Completas</span> <i class="ri-arrow-down-s-line"></i></p> -->
+                    </table>
+                </section>
+                <section class="p-3 bg-light-gray">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="strong">Garantia</h5>
+                        <i class="ri-shield-check-line large"></i>
+                    </div>
+                    <label for="" class="--muted --upper --mb-half">Motor y Transmision</label>
+                    <h2>5 años <span>|| 100,000km</span></h2>
+                    
+                </section>
+                <section class="p-3">
+                    <table class="table table-borderless">
+                        <h5 class="strong">Estilo</h5>
+                        <tbody>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Tipo</td>
+                                <td>Deportivo</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between">
+                                <td class="strong">Color Exterior</td>
+                                <td>Azul</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Material Asientos</td>
+                                <td class="text-right">Gamuza</td>
+                            </tr>
+                            <hr>
+                            <tr class="d-flex justify-content-between align-items-start">
+                                <td class="strong">Toma de Aire</td>
+                                <td class="text-right">Supercargado</td>
+                            </tr>
+                            <hr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="p-3">
+                    <table class="table table-borderless">
+                        <h5 class="strong">Accesorios y Extras</h5>
+                        <div class="row" id="extras--list">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li>
+                                        <img src="../../../assets/img/icons/abs.png" class="--mr-half" alt="">
+                                        <span>Frenos ABS</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/traction.png" class="--mr-half" alt="">
+                                        <span>Control de Traccion</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/ac.png" class="--mr-half" alt="">
+                                        <span>Aire Multizona</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/airbag.png" class="--mr-half" alt="">
+                                        <span>Bolsa de Aire de Pasajero</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/paddleshift.png" class="--mr-half" alt="">
+                                        <span>Cambios en el Guia (paddleshift)</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/sunroof.png" class="--mr-half" alt="">
+                                        <span>Sunroof</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/sunroof.png" class="--mr-half" alt="">
+                                        <span>Techo Panoramico</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-user-add-line --primary"></i></span>
+                                        <span>3 filas de Asientos</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-arrow-up-line --primary"></i></span>
+                                        <span>Cruise Control</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-map-2-line --primary"></i></span>
+                                        <span>Navegacion por GPS</span>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-leaf-line --primary"></i></span>
+                                        <span>Modo Eco</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-vidicon-line --primary"></i></span>
+                                        <span>Camara de Reversa</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-signal-tower-line --primary"></i></span>
+                                        <span>Sensores de Punto Ciego</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/accident.png" class="--mr-half" alt="">
+                                        <span>Sensores de Colision</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/smartkey.png" class="--mr-half" alt="">
+                                        <span>Llave Inteligente</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/push.png" class="--mr-half" alt="">
+                                        <span>Encendido por Toque (Push Button)</span>
+                                    </li>
+                                    <li>
+                                        <img src="../../../assets/img/icons/heatedseats.png" class="--mr-half" alt="">
+                                        <span>Calentador de Asientos</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-android-line --primary"></i></span>
+                                        <span>Android Auto</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-apple-line --primary"></i></span>
+                                        <span>Apple Car Play</span>
+                                    </li>
+                                    <li>
+                                        <span class="i-wrap --mr-half "><i class="ri-bluetooth-line --primary"></i></span>
+                                        <span>Radio Bluetooth</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </table>
+                </section>
             </div>
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
                 <section class="p-3">
                     <label for="" class="--upper --muted --mid">nuevo | <span>0km</span></label>
                     <h4><strong>Ford Mustang GT350 2021</strong></h4>
@@ -71,9 +287,10 @@
                             </tr>
                             <hr>
                         </tbody>
+                        <p href="" class="text-center --primary mt-3"><span class="--mr-half">Ver Especificaciones Completas</span> <i class="ri-arrow-down-s-line"></i></p>
                     </table>
                 </section>
-                <section class="p-3 mt-3">
+                <section class="p-3">
                     <table class="table table-borderless">
                         <h5 class="strong">Estilo</h5>
                         <tbody>
@@ -105,10 +322,10 @@
                         </tbody>
                     </table>
                 </section>
-            </div>
-            <div class="col-lg-3">
+            </div> -->
+            <div class="col-lg-5">
                 <section class="p-3 bg-light-gray">
-                    <h5>Vendedor</h5>
+                    <h4 class="strong">Vendedor</h4>
                     <hr>
                     <ul class="mt-3">
                         <li>
@@ -123,6 +340,10 @@
                             <i class="ri-phone-line --mr-half --primary"></i>
                             <span>809 000 0000</span>
                         </li>
+                        <li>
+                            <i class="ri-map-pin-line --mr-half --primary"></i>
+                            <span>Calle Guarocuya esq. Ejemplo, #16. El Naco, DN</span>
+                        </li>
                         <li class="mt-3">
                             <div class="button button-lg button-secn has-icon">
                                 <span>Solicitar Informacion</span>
@@ -136,7 +357,78 @@
                             </div>
                         </li>
                     </ul>
+                    <hr>
+                    <div id="location" class="mt-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7568.370434494505!2d-69.91428845132486!3d18.475267691999296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89da5a346ba5%3A0xf1cca324064b2438!2sBanco%20Caribe!5e0!3m2!1sen!2sdo!4v1636148106219!5m2!1sen!2sdo" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </section>
+                <section class="p-3 bg-light-gray mt-3">
+                    <h4 class="strong">Calculadora de Pagos</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="" class="--upper">Precio</label>
+                            <input type="number" class="w-100" placeholder="US$37,000" disabled>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="" class="--upper">Inicial</label>
+                            <input type="number" class="w-100 bg-ligth-white" placeholder="US$0">
+                        </div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-lg-6">
+                            <label for="" class="--upper">duracion (meses)</label>
+                            <input type="number" class="w-100" placeholder="12" >
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="" class="--upper">Interes Anual (%)</label>
+                            <input type="number" class="w-100 bg-ligth-white" placeholder="12">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="pt-3 pb-3">
+                                <label for="" class="--upper">mensualidad</label>
+                                <h3 class="no-m">RD$29,400</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="pt-3 pb-3">
+                                <label for="" class="--upper --mb-half">financiamiento</label>
+                                <h5 class="no-m">RD$2,350,000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <small class="--muted">
+                            Esta calculadora es solo informativa. Porfavor contacte al vendedor para
+                            obtener informacion precisa sobre su financiamiento.
+                        </small>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-6">
+                            <div class="button button-lg button-prim has-icon">
+                                <span>Financiamiento</span>
+                                <i class="ri-file-list-3-line"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="button button-lg button-confirm has-icon">
+                                <span>Whatsapp</span>
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div>
+                <small>
+                    <span><strong>Descargo de responsabilidad de autogenio.com: </strong></span>
+                    La informacion de los vehiculos mostrados en este portal es suplida por el vendedor, el fabricante y/u otros
+                    terceros; Autogenio.com no es responsable por la presicion de dicha informacion. Autogenio.com provee este
+                    servicio y materiales sin representacion ni garantia de ningun tipo, expresada ni implicada.
+                </small>
             </div>
         </div>
     </div>

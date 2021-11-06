@@ -172,6 +172,9 @@ input, select, textarea {
         outline: none !important;
     }
 }
+input:disabled {
+    background-color: #dfdfdf !important;
+}
 i {
     font-size: $base-font-size;
     &.large {
@@ -179,6 +182,9 @@ i {
     }
     &.x-large {
         font-size: 2em;
+    }
+    &.--light {
+        font-weight: 100 !important;
     }
 }
 hr {
@@ -385,4 +391,24 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: #f8f8fa url("./assets/img/icons/arrow-down.svg") no-repeat scroll 97% center / 25px 25px !important;
+}
+#extras--list {
+    ul {
+        margin-bottom: 0 !important;
+    }
+    .i-wrap {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        width: 24px !important;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0rem;
+    }
 }
