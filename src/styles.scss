@@ -54,15 +54,15 @@ app-root {
         flex-flow: column;
     }
 }
+.quick {
+    animation-duration: 0.2s !important;
+}
 .navbar-brand img {
     width: 160px;
     margin-right: 3em;
 }
 .--mid {
     font-weight: 500;
-}
-.--text-shadow {
-    //text-shadow: 2px 2px 15px #00000069;
 }
 .--confirm {
     color:$color-confirm;

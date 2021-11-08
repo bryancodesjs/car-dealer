@@ -2,6 +2,7 @@
 <div class="container-fluid --flex animate__animated animate__fadeIn">
     <div class="container">
         <div class="row mt-5 mb-5">
+            <!-- galeria de imagenes -->
             <div class="col-lg-7">
                 <section class="p-3">
                     <div class="col">
@@ -43,9 +44,13 @@
                             <h5 class="--primary"><strong>US$6,000</strong></h5>
                         </div>
                     </div>
-                    <div class="button button-md button-prim has-icon mt-2">
-                        <span>Solicitar Financiamiento</span>
-                        <i class="ri-file-list-3-line"></i>
+                    <div class="row d-flex justify-content-end">
+                        <div class="col-lg-6">
+                            <div class="button button-md button-prim has-icon mt-2" (click)="toggleModalFinanciamiento()">
+                                <span>Solicitar Financiamiento</span>
+                                <i class="ri-file-list-3-line"></i>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="p-3">
@@ -238,91 +243,7 @@
                     </table>
                 </section>
             </div>
-            <!-- <div class="col-lg-3">
-                <section class="p-3">
-                    <label for="" class="--upper --muted --mid">nuevo | <span>0km</span></label>
-                    <h4><strong>Ford Mustang GT350 2021</strong></h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <label for="" class="--upper --muted --mid">Precio</label>
-                            <h5 class="--primary"><strong>US$37,000</strong></h5>
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="" class="--upper --muted --mid">Inicial desde</label>
-                            <h5 class="--primary"><strong>US$6,000</strong></h5>
-                        </div>
-                    </div>
-                    <div class="button button-md button-prim has-icon mt-2">
-                        <span>Solicitar Financiamiento</span>
-                        <i class="ri-file-list-3-line"></i>
-                    </div>
-                </section>
-                <section class="p-3">
-                    <table class="table table-borderless">
-                        <h5 class="strong">Especifiaciones</h5>
-                        <tbody>
-                            <tr class="d-flex justify-content-between">
-                                <td class="strong">Combustible</td>
-                                <td>Gasolina</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between">
-                                <td class="strong">Cilindros</td>
-                                <td>8</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between align-items-start">
-                                <td class="strong">Transmision</td>
-                                <td class="text-right">Manual [6 Velocidades]</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between align-items-start">
-                                <td class="strong">Toma de Aire</td>
-                                <td class="text-right">Supercargado</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between align-items-start">
-                                <td class="strong">Traccion</td>
-                                <td class="text-right">Trasera</td>
-                            </tr>
-                            <hr>
-                        </tbody>
-                        <p href="" class="text-center --primary mt-3"><span class="--mr-half">Ver Especificaciones Completas</span> <i class="ri-arrow-down-s-line"></i></p>
-                    </table>
-                </section>
-                <section class="p-3">
-                    <table class="table table-borderless">
-                        <h5 class="strong">Estilo</h5>
-                        <tbody>
-                            <tr class="d-flex justify-content-between">
-                                <td class="strong">Color Interior</td>
-                                <td>Beige</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between">
-                                <td class="strong">Color Exterior</td>
-                                <td>Azul</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between align-items-start">
-                                <td class="strong">Material Asientos</td>
-                                <td class="text-right">Gamuza</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between align-items-start">
-                                <td class="strong">Toma de Aire</td>
-                                <td class="text-right">Supercargado</td>
-                            </tr>
-                            <hr>
-                            <tr class="d-flex justify-content-between align-items-start">
-                                <td class="strong">Traccion</td>
-                                <td class="text-right">Trasera</td>
-                            </tr>
-                            <hr>
-                        </tbody>
-                    </table>
-                </section>
-            </div> -->
+            <!-- panel lateral, vendedor-->
             <div class="col-lg-5">
                 <section class="p-3 bg-light-gray">
                     <h4 class="strong">Vendedor</h4>
@@ -344,11 +265,45 @@
                             <i class="ri-map-pin-line --mr-half --primary"></i>
                             <span>Calle Guarocuya esq. Ejemplo, #16. El Naco, DN</span>
                         </li>
-                        <li class="mt-3">
-                            <div class="button button-lg button-secn has-icon">
+                        <li class="mt-3" *ngIf="!infoForm">
+                            <div class="button button-lg button-secn has-icon" (click)="toggleInfoForm()">
                                 <span>Solicitar Informacion</span>
                                 <i class="ri-mail-send-line"></i>
                             </div>
+                        </li>
+                        <li id="solicitarInfoForm" *ngIf="infoForm" class="animate__animated animate__fadeIn">
+                            <hr>
+                            <h3 class="mt-3">Solicitar Informacion</h3>
+                            <div class="form-group">
+                                <label for="">Mi nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Correo Electronico</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Telefono / Whatsapp</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="">Mensaje</label>
+                                <textarea type="text" class="form-control"></textarea>
+                            </div>
+                            <div class="row d-flex justify-content-between mb-3">
+                                <div class="col-lg-4">
+                                    <div class="button button-lg button-transp has-icon" (click)="toggleInfoForm()">
+                                        Cancelar
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="button button-lg button-prim has-icon">
+                                        Enviar
+                                        <i class="ri-send-plane-2-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
                         </li>
                         <li class="mt-3">
                             <div class="button button-lg button-confirm has-icon">
@@ -406,7 +361,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-lg-6">
-                            <div class="button button-lg button-prim has-icon">
+                            <div class="button button-lg button-prim has-icon" (click)="toggleModalFinanciamiento()">
                                 <span>Financiamiento</span>
                                 <i class="ri-file-list-3-line"></i>
                             </div>
@@ -434,3 +389,80 @@
     </div>
 </div>
 <app-main-footer></app-main-footer>
+
+<!-- Modal -->
+<div *ngIf="mostrarFinanciamiento" class="quick modal fade show d-block animate__animated animate__fadeIn" id="financiamientoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Solicitar Financiamiento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="toggleModalFinanciamiento()"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <label for="">ITEM 10594</label>
+                    <h4>Ford Mustang GT350 2021</h4>
+                    <h4 class="--primary">US$37,000</h4>
+                </div>
+            </div>
+          <div class="row mt-4">
+              <div class="col-lg-6">
+                  <label for="">NOMBRE(S)</label>
+                  <input type="text" class="form-control">
+              </div>
+              <div class="col-lg-6">
+                  <label for="">APELLIDOS</label>
+                  <input type="text" class="form-control">
+              </div>
+              <div class="col-lg-6">
+                  <label for="">EDAD</label>
+                  <input type="number" class="form-control">
+              </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-6">
+                <label for="">Ocupacion</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="">Ingresos Mensuales</label>
+                <input type="number" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="">Lugar de Trabajo</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-lg-6">
+                <label for="">Tiempo Laborando</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+          <div class="row mt-4">
+              <div class="col-lg-6">
+                <label for="">TELEFONO</label>
+                <input type="phone" class="form-control">
+              </div>
+              <div class="col-lg-6">
+                <label for="">EMAIL</label>
+                <input type="email" class="form-control">
+              </div>
+          </div>
+          <div class="row mt-4 mb-4">
+              <div class="col-lg-6">
+                <label for="">INICIAL (RD$)</label>
+                <input type="number" class="form-control">
+              </div>
+              <div class="col-lg-6">
+                <label for="">DURACION (MESES)</label>
+                <input type="number" class="form-control">
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="button button-lg button-secn" data-bs-dismiss="modal" (click)="toggleModalFinanciamiento()">Cancelar</div>
+          <div class="button button-lg button-prim">Completar Solicitud</div>
+        </div>
+      </div>
+    </div>
+  </div>

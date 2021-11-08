@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
+
+  mostrarFinanciamiento = false;
+
   collection = [
     'https://i.blogs.es/29438e/ford-mustang-shelby-gt500-mexico_/1366_2000.jpg',
     'https://i.blogs.es/dbea83/ford-mustang-shelby-gt500-mexico_12/1366_2000.jpg',
@@ -16,9 +19,24 @@ export class ItemComponent implements OnInit {
     'https://i.blogs.es/d30a56/ford-mustang-shelby-gt500-prueba/1366_2000.jpg',
     'https://i.blogs.es/01a984/ford-mustang-shelby-gt500-mexico_27/1366_2000.jpg'
   ]
+  infoForm = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleInfoForm() {
+    if(this.infoForm) {
+      this.infoForm = false;
+    } else {
+      this.infoForm = true;
+    }
+  }
+  toggleModalFinanciamiento() {
+    if(this.mostrarFinanciamiento) {
+      this.mostrarFinanciamiento = false;
+    } else {
+      this.mostrarFinanciamiento = true;
+    }
+  }
 }
